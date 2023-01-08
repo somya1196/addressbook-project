@@ -1,0 +1,14 @@
+- hosts: test-server
+  become: yes
+  tasks: 
+   - name: install docker
+     apt: 
+       pkg: docker.io
+       state: present
+   - name: start docker service
+     service:
+       name: docker
+       state: started
+       enabled: true
+   - name: deploy addressbook application
+     command: docker run -itd --name monu -p 8090:8080 somesh123/addressbook:8.2
