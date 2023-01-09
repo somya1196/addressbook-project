@@ -11,4 +11,4 @@
        state: started
        enabled: true
    - name: deploy addressbook application
-     command: docker run -itd --name monu -p 8090:8080 somesh123/addressbook:8.2
+     command: docker run -itd --name monu -p 8090:8080 somya1196/addressbook:8.2
